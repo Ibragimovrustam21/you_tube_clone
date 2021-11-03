@@ -5,7 +5,7 @@ export const VideoList = ({ videos, setSelectVideos }) => {
     <>
       {videos.map((r, key) => {
         return (
-          <div className='row video_list_item' onClick={() => setSelectVideos(videos[key])} style={{ cursor: 'pointer', marginBottom: '10px' }}>
+          <div className='row video_list_item' key={key} onClick={() => setSelectVideos(videos[key])} style={{ cursor: 'pointer', marginBottom: '10px' }}>
             <div className='col-lg-7 col-12 col-sm-6 col-md-12 video_iframe'>
               <img className='w-100 h-100' src={r.snippet.thumbnails.medium.url} alt='' />
             </div>
